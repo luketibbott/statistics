@@ -1,0 +1,1 @@
+This repository is mostly for personal use. As I study statistics, I code what would otherwise be a tedious process in to a Python function. This makes it very easy to do things like find a critical z value for any desired level of confidence when computing a confidence interval. 
