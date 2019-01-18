@@ -1,0 +1,17 @@
+my interpretation:
+
+You chose 13 cards in 2018. You want to know what the probability of choosing any 4 of those 13
+again in 2019 is. There are 4c13 ways to choose these 4 cards that will match in 2019.
+
+There are 74c13 different outcomes in the 2019 probability space. 
+
+You are interested in the outcomes where 4 of the cards matched 2018's draws.
+
+That is, 4 of the 13 draws in 2019 appeared in 2018, and 9 of the 13 did not occur in 2018
+(assuming we're interested in only *exactly* 4, and not 4 or more). 
+
+As we said before, there are 13c4 "valid" choices that appeared in 2018, and the rest of the
+cards must come from the set of cards that didn't appear in 2018. There are 61 cards that didn't
+appear in 2018, and so 61c9 ways to choose the remaining 9 cards.
+
+(61c19 * 13c4) / 74c13 = .118
