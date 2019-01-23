@@ -46,3 +46,26 @@ def std_of_discrete(observed_probs):
     std = np.sqrt(variance)
 
     return std
+
+def binomial(n_trials, n_success, prob_success):
+    return nCr(n_trials, n_success) * prob_success**n_success * (1 - prob_success)**(n_trials - n_success)
+
+def r(xs, ys):
+    xs = np.array(xs)
+    ys = np.array(ys)
+    
+    x_mean = np.mean(xs)
+    y_mean = np.mean(ys)
+
+    x_std = xs.std(ddof=1)
+    y_std = ys.std(ddof=1)
+
+    r = 0
+
+    for x, y in zip(xs, ys):
+        x_z_score = (x - x_mean)/x_std
+        y_z_score = (y - y_mean)/y_std
+
+        r += x_z_score * y_z_score
+
+    return r / (len(xs) - 1)
